@@ -154,6 +154,10 @@ func handleWriteBlock(w http.ResponseWriter, r *http.Request) {
 	respondWithJSON(w, r, http.StatusCreated, newBlock)
 }
 
+func respondWithJSON(w http.ResponseWriter, r *http.Request, code int, payload interface{}) {
+	
+}
+
 func main(){
   fmt.Println("Hello world!")
   fmt.Println("I am a truly evil genius!")
