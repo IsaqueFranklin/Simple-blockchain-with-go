@@ -74,3 +74,11 @@ func isChainValid() bool {
 
   return true
 }
+
+func main() {
+  //Create the genesis block
+
+  genesisBlock := Block{0, time.Now().string(), "Genesis Block", "", ""}
+  genesisBlock.Hash = calculateHash(genesisBlock)
+  Blockchain = append(Blockchain, genesisBlock)
+}
