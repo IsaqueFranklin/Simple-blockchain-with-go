@@ -37,7 +37,7 @@ var Blockchain []Block
 func createBlock(data string, prevHash string) Block {
   var newBlock Block
   newBlock.Index = len(Blockchain)
-  newBlock.Timestamp = time.Now().string()
+  newBlock.Timestamp = time.Now().String()
   newBlock.Data = data
   newBlock.PrevHash = prevHash
   newBlock.Hash = calculateHash(newBlock)
@@ -78,7 +78,7 @@ func isChainValid() bool {
 func main() {
   //Create the genesis block
 
-  genesisBlock := Block{0, time.Now().string(), "Genesis Block", "", ""}
+  genesisBlock := Block{0, time.Now().String(), "Genesis Block", "", ""}
   genesisBlock.Hash = calculateHash(genesisBlock)
   Blockchain = append(Blockchain, genesisBlock)
 
